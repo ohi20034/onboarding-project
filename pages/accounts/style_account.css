@@ -80,4 +80,11 @@ nav a {
         padding: 0px 20px !important;
     }
 }
-/* accounts */
+/* registration_form */
+#registration{
+    background-color: aliceblue;
+    margin: 80px 20% 10% 20%;
+}
+.registration_form_container{
+   
+}

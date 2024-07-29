@@ -19,3 +19,12 @@ searchButton.addEventListener("click", function () {
     isSearchExpanded = !isSearchExpanded;
   }
 });
+
+document.addEventListener("scroll", function () {
+  console.log(window.scrollY);
+  if (window.scrollY >= 58.0) {
+    header_container.style.backgroundColor = "#b0d1c8";
+  } else {
+    header_container.style.backgroundColor = "";
+  }
+});
