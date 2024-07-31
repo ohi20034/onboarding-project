@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 /* header */
 .container {
     display: flex;
@@ -18,20 +19,24 @@
     width: 100%;
     overflow: auto;
 }
+
 nav a {
     text-decoration: none;
     color: #43655A;
 }
+
 .nav-first-part,
 .nav-middle-part,
 .nav-last-part {
     margin: 5px 10px 0px 5px;
 }
+
 .nav-middle-part {
     flex-grow: 1;
     display: flex;
     justify-content: center;
 }
+
 .nav-middle-part input {
     padding-left: 10px;
     background-color: #e4ede6;
@@ -41,6 +46,7 @@ nav a {
     outline: none;
     font-size: 20px;
 }
+
 .nav-middle-part a {
     display: flex;
     align-items: center;
@@ -52,39 +58,130 @@ nav a {
     margin-left: -1px;
     border-radius: 0 8px 8px 0;
 }
+
 .nav-last-part {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
+
 .nav-user-account-bar,
 .nav-cart-bar {
     display: flex;
     align-items: center;
     gap: 5px;
 }
+
 @media screen and (max-width: 450px) {
     .container {
         font-size: 14px;
     }
+
     .nav-middle-part a {
         height: 35px;
     }
+
     .nav-middle-part input {
         display: none;
     }
+
     .nav-middle-part a {
         border-radius: 8px 8px;
     }
-   #hero {
-        padding: 0px 20px !important;
-    }
 }
+
 /* registration_form */
-#registration{
-    background-color: aliceblue;
-    margin: 80px 20% 10% 20%;
+#registration {
+    margin: 130px 25% 0 25%;
+    width: auto;
 }
-.registration_form_container{
-   
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    background-color: #e4ede6;
+    justify-content: center;
+}
+
+form>div {
+    width: 50%;
+}
+
+.registration_form_container input,
+select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+    height: 35px;
+    border: none;
+    outline: none;
+    width: 90%;
+    display: flex;
+}
+
+.registration_form_container button {
+    height: 35px;
+    width: 30%;
+    border: none;
+    cursor: pointer;
+    background-color: #43655A;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.registration-title {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-title {
+    font-size: 14px;
+}
+
+.login-title a {
+    text-decoration: none;
+    color: rgb(79, 126, 176);
+}
+@media screen and (max-width: 768px) {
+    #registration {
+        margin: 100px 10% 0 10%;
+        width: auto;
+    }
+
+    form>div {
+        width: 100%;
+    }
+
+    .login-title {
+        font-size: 14px;
+    }
+    .registration_form_container input,
+    select {
+        font-size: 10px;
+        height: 25px;
+    }
+    .registration_form_container button{
+        font-size:10px;
+        height: 25px;
+    }
+    .registration-title{
+        flex-direction: column;
+        line-height: 25px;
+    }
+    .registration-title h1{
+        font-size: 17px;
+    }
+    .login-title {
+        font-size: 10px;
+        justify-content: flex-end;
+    }
+    .registration_form_container select{
+        height: 30px;
+    }
 }
