@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -37,19 +37,31 @@
     </header>
     <main>
         <section id="login">
-            <form action="">
-                <div>
-                    <div class="login">
-                        <input type="text" placeholder="login">
-                    </div>
-                    <div >
-
-                    </div>
+            <div class="login-title">
+                <div class="login-account-title">
+                    <h1>Welcome to MyShop! Please login.</h1>
                 </div>
+                <div class="registration-title">
+                    <span>
+                        New member?
+                        <a href="../accounts/account.html">Register</a>
+                        here.
+                    </span>
+                </div>
+            </div>
+            <form action="" class="login_form_container">
+                <div class="email">
+                    <input type="email" id="email" required placeholder="Email">
+                </div>
+                <div class="password">
+                    <input type="password" id="password" required placeholder="Password">
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button class="login-button">Login</button>
             </form>
         </section>
     </main>
     <script src="../script_login.js"></script>
 </body>
-
-</html>

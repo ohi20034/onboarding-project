@@ -97,6 +97,7 @@ nav a {
 }
 
 form {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -148,6 +149,7 @@ select {
     text-decoration: none;
     color: rgb(79, 126, 176);
 }
+
 @media screen and (max-width: 768px) {
     #registration {
         margin: 100px 10% 0 10%;
@@ -158,30 +160,40 @@ select {
         width: 100%;
     }
 
+    form {
+        margin-top: 5px;
+    }
+
     .login-title {
         font-size: 14px;
     }
+
     .registration_form_container input,
     select {
         font-size: 10px;
         height: 25px;
     }
-    .registration_form_container button{
-        font-size:10px;
+
+    .registration_form_container button {
+        font-size: 10px;
         height: 25px;
     }
-    .registration-title{
+
+    .registration-title {
         flex-direction: column;
         line-height: 25px;
     }
-    .registration-title h1{
-        font-size: 17px;
+
+    .registration-title h1 {
+        font-size: 14px;
     }
+
     .login-title {
         font-size: 10px;
         justify-content: flex-end;
     }
-    .registration_form_container select{
-        height: 30px;
+
+    .registration_form_container select {
+        height: 32px;
     }
 }
