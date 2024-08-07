@@ -90,8 +90,8 @@ nav a {
     }
 }
 
-/* registration_form */
-#registration {
+/* forgot form */
+#forgot {
     margin: 100px 25% 0 25%;
     width: auto;
 }
@@ -103,98 +103,4 @@ form {
     padding: 10px;
     background-color: #e4ede6;
     justify-content: center;
-}
-
-form>div {
-    width: 50%;
-}
-
-.registration_form_container input,
-select {
-    margin: 10px;
-    padding: 10px;
-    font-size: 13px;
-    height: 35px;
-    border: none;
-    outline: none;
-    width: 90%;
-    display: flex;
-}
-
-
-
-.registration_form_container button {
-    height: 35px;
-    width: 30%;
-    border: none;
-    cursor: pointer;
-    background-color: #43655A;
-    color: white;
-    font-size: 18px;
-    border-radius: 20px;
-}
-
-.registration-title {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.login-title {
-    font-size: 14px;
-}
-
-.login-title a {
-    text-decoration: none;
-    color: rgb(79, 126, 176);
-}
-
-@media screen and (max-width: 768px) {
-    #registration {
-        margin: 100px 10% 0 10%;
-        width: auto;
-    }
-
-    form>div {
-        width: 100%;
-    }
-
-    form {
-        margin-top: 5px;
-    }
-
-    .login-title {
-        font-size: 14px;
-    }
-
-    .registration_form_container input,
-    select {
-        font-size: 10px;
-        height: 25px;
-    }
-
-    .registration_form_container button {
-        font-size: 10px;
-        height: 25px;
-    }
-
-    .registration-title {
-        flex-direction: column;
-        line-height: 25px;
-    }
-
-    .registration-title h1 {
-        font-size: 14px;
-    }
-
-    .login-title {
-        font-size: 10px;
-        justify-content: flex-end;
-    }
-    .registration_form_container select {
-        height: 32px;
-        padding: 5px;
-    }
 }
