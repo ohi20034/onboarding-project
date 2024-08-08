@@ -103,6 +103,7 @@ form {
     padding: 10px;
     background-color: #e4ede6;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 form>div {
@@ -120,8 +121,6 @@ select {
     width: 90%;
     display: flex;
 }
-
-
 
 .registration_form_container button {
     height: 35px;
