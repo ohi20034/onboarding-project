@@ -103,6 +103,8 @@ form {
     padding: 10px;
     background-color: #e4ede6;
     justify-content: center;
+    border-radius: 15px;
+    padding-bottom: 15px;
 }
 
 form>div {
