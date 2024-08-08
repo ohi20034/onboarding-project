@@ -192,6 +192,7 @@ select {
         font-size: 10px;
         justify-content: flex-end;
     }
+
     .registration_form_container select {
         height: 32px;
         padding: 5px;
