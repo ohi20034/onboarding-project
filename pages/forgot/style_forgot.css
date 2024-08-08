@@ -104,4 +104,33 @@ form {
     padding: 10px;
     background-color: #e4ede6;
     justify-content: center;
+    padding-bottom: 20px;
+}
+.forgot_form_container input{
+    margin: 10px;
+    padding: 10px;
+    font-size: 13px;
+    height: 35px;
+    border: none;
+    outline: none;
+    width: 97%;
+    display: flex;
+}
+form>div {
+    width: 100%;
+}
+.forgot-text{
+    margin-top: 8px;
+    font-size: 13px;
+    color: rgb(160, 160, 160);
+}
+.forgot_form_container button {
+    height: 35px;
+    width: 30%;
+    border: none;
+    cursor: pointer;
+    background-color: #43655A;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
 }
