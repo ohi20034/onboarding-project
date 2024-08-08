@@ -134,3 +134,31 @@ form>div {
     font-size: 18px;
     border-radius: 20px;
 }
+@media screen and (max-width: 768px) {
+    #forgot {
+        margin: 100px 10% 0 10%;
+        width: auto;
+    }
+    form{
+        margin-top: 9px;
+    }
+    form>div {
+        margin-right: 12px;
+    }
+    .forgot-text{
+        font-size: 10px;
+    }
+    .forgot_form_container input {
+        font-size: 10px;
+        height: 25px;
+    }
+
+    .forgot-title {
+        font-size: 10px;
+    }
+    .forgot_form_container button {
+        margin-top: 5px;
+        font-size: 10px;
+        height: 25px;
+    }
+}
