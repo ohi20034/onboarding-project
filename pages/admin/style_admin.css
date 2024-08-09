@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #cbd6d3;
+    height: 8dvh;
+
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+.logo {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.header-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    display: flex;
+}
+
+.menu-bar {
+    padding: 20px;
+    line-height: 40px;
+    width: 15%;
+    height: 92dvh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.menu-list ul li a:hover {
+    text-decoration: underline;
+}
+.product-add-form{
+    display: flex;
+    align-items: center;
+}
+form {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
