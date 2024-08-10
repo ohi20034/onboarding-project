@@ -26,7 +26,7 @@ header h1 {
 .logo {
     width: 200px;
     display: flex;
-    justify-content: center;overflow: hidden;
+    justify-content: center;
 }
 
 .header-title {
@@ -55,4 +55,7 @@ main {
 }
 .menu-list ul li a:hover {
     text-decoration: underline;
+}
+.product-list{
+    width: 100%;
 }
