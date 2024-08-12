@@ -1,6 +1,6 @@
 * {
     margin: 0px;
-    padding: 0%;
+    padding: 0px;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
 }
@@ -41,6 +41,7 @@ ul {
 
 main {
     display: flex;
+    width: 100%;
 }
 
 .menu-bar {
@@ -53,9 +54,78 @@ main {
     justify-content: center;
     overflow: hidden;
 }
+
+.product-list {
+    width: calc(100% - 200px);
+}
+
 .menu-list ul li a:hover {
     text-decoration: underline;
 }
-.product-list{
+
+.admin-dashboard {
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.product-table {
     width: 100%;
+    border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.product-table th:first-child,
+.product-table td:first-child {
+    width: 5%;
+}
+
+.product-table th:nth-child(2),
+.product-table td:nth-child(2) {
+    width: 10%;
+}
+
+.product-table th:nth-child(3),
+.product-table td:nth-child(3) {
+    width: 30%;
+}
+
+.product-table th:nth-child(4),
+.product-table td:nth-child(4) {
+    width: 15%;
+}
+
+.product-table th:nth-child(5),
+.product-table td:nth-child(5) {
+    width: 15%;
+}
+
+.product-table th:nth-child(6),
+.product-table td:nth-child(6) {
+    width: 25%;
+    text-align: center;
+}
+.product-table button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #585e5c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-table button:hover {
+    background-color: #45a049;
 }
