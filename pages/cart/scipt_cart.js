@@ -31,6 +31,7 @@ document.addEventListener("scroll", function () {
   }
 });
 
+// Shopping Cart
 function changeValue(digit, rowId) {
   const numberInput = document.getElementById(rowId);
   const currentValue = parseInt(numberInput.value);
@@ -57,4 +58,13 @@ function updateTotalPrice(rowId, quantity) {
 
   const totalPriceCell = document.getElementById(`total-${rowId}`);
   totalPriceCell.textContent = totalPrice.toFixed(2);
+
+  updateCartTotal();
+}
+function updateCartTotal() {
+  const totalPriceElement = document
+    .getElementById("total-price")
+    .querySelector("span");
+
+  const amount = parseFloat(totalPriceElement.textContent.trim());
 }
