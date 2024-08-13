@@ -248,3 +248,8 @@ thead{
 .checkout-btn:hover {
     background-color: #e65c00;
 }
+
+.checkout-btn a{
+    text-decoration: none;
+    color: #ffffff;
+}
