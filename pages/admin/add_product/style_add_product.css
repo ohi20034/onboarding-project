@@ -76,15 +76,18 @@ form {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
+
 .product-add-form form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 20px; /* Space between the grid items */
-    max-width: 600px;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+    gap: 20px;
+    /* Space between the grid items */
+    width: 800px;
     margin: auto;
 }
 
-.form-group button{
+.form-group button {
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -98,18 +101,21 @@ form {
 .form-group button:hover {
     background-color: #45a049;
 }
+
 .product-name,
 .product-categories,
 .product-price,
 .product-code {
-    grid-column: span 1; /* Each takes up one column */
+    grid-column: span 1;
+    /* Each takes up one column */
 }
 
 .product-description,
 .front-image,
 .other-images,
 .form-group {
-    grid-column: span 2; /* These span both columns */
+    grid-column: span 2;
+    /* These span both columns */
 }
 
 label {
@@ -130,19 +136,96 @@ select {
 }
 
 .image-preview img {
-    width: 100px; /* Set the desired width for preview images */
+    width: 100px;
+    /* Set the desired width for preview images */
     height: auto;
     margin-right: 10px;
     margin-top: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.product-description textarea {
+
+.product-description {
+    /* background-color: #214622; */
+    height: 300px;
+}
+
+/* .product-description .toolbar {
+    border: 1px solid black;
+    height: 50px;
+} */
+
+.toolbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #6662622f;
+}
+
+.toolbar button,
+select[name=Font-Size] {
+    border: none;
+    color: black;
+    font-weight: 300;
+    background: transparent;
+    padding: 10px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.tool-item-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    border-right: 1px solid #6662622f;
+}
+
+.tool-item-2 {
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #6662622f;
+
+}
+
+.tool-item-3 {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    border-right: 1px solid #6662622f;
+}
+
+.tool-item-4 {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+input[type=color] {
+    width: 49px;
+    outline: none;
+    border: none;
+    background: none;
+
+}
+
+.editor {
+    height: 230px;
+    margin-top: 5px;
+    border: 1px solid #6662622f;
+}
+
+.des-text-aera {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    overflow-y: auto;
 }

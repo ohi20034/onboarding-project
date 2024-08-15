@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style_add_product.css">
     <title>Admin Panel</title>
 </head>
@@ -62,11 +65,34 @@
                     <label for="code">Product Code:</label>
                     <input type="text" id="code" name="code" required>
                 </div>
-
                 <div class="product-description">
-                    <label>Product Description:</label>
-                    
-                    <textarea id="description" name="description" rows="4" required></textarea>
+                    <label>Description</label>
+                    <div class="toolbar">
+                        <div class="font tool-item-1">
+                            <select id="font-type" name="Font-Size" required>
+                                <option disabled selected>Font Size</option>
+                                <option>Normal Text</option>
+                                <option>Heading 1</option>
+                                <option>Heading 2</option>
+                            </select>
+                        </div>
+                        <div class="bulleted tool-item-2">
+                            <button type="button">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+                        </div>
+                        <div class="bold tool-item-3">
+                            <button type="button">
+                                <i class="fa-solid fa-bold" style="color: #000000;"></i>
+                            </button>
+                        </div>
+                        <div class="color tool-item-4">
+                            <input type="color" name="color" id="font-color">
+                        </div>
+                    </div>
+                    <div class="editor">
+                        <div id="description-aera" class="des-text-aera" contenteditable="true"></div>
+                    </div>
                 </div>
 
                 <div class="front-image">
