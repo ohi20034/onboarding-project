@@ -128,7 +128,7 @@ nav a {
     display: flex;
     margin: 20px;
     padding: 20px;
-    background-color: #43655A;
+    /* background-color: #43655A; */
 }
 
 .product-image-section {
