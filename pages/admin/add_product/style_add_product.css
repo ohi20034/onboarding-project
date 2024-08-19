@@ -229,3 +229,12 @@ input[type=color] {
     outline: none;
     overflow-y: auto;
 }
+
+ul {
+    list-style-type: disc; 
+    margin-left: 16px;
+}
+
+ul li {
+    margin-bottom: 2px;
+}

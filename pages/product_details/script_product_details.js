@@ -22,7 +22,7 @@ searchButton.addEventListener("click", function () {
   }
 });
 
-document. addEventListener("scroll", function () {
+document.addEventListener("scroll", function () {
   console.log(window.scrollY);
   if (window.scrollY >= 58.0) {
     header_container.style.backgroundColor = "#b0d1c8";
@@ -30,4 +30,3 @@ document. addEventListener("scroll", function () {
     header_container.style.backgroundColor = "";
   }
 });
-
