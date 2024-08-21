@@ -122,6 +122,7 @@ nav a {
     color: white;
 }
 
+
 /* product card */
 .product-view {
     margin: 20px;
@@ -193,4 +194,34 @@ nav a {
 .buy-now:hover {
     background-color: #37534b;
     color: #fff;
+}
+
+@media screen and (max-width: 450px) {
+    .product-view {
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .product-card {
+        width: 140px;
+        padding: 10px;
+    }
+
+    .product-name {
+        font-size: 12px;
+    }
+
+    .product-price {
+        font-size: 12px;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+    .buy-now,.add-to-cart{
+        font-size: 10px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 5px;
+    }
 }

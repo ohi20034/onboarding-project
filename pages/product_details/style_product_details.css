@@ -140,7 +140,7 @@ nav a {
     display: flex;
     height: auto;
     justify-content: space-around;
-   /*  align-items: center; */
+    /*  align-items: center; */
     padding: 15px;
     /* background-color: #44997e; */
 }
@@ -206,8 +206,8 @@ nav a {
     position: relative;
     /* background-color: #44997e; */
 }
- 
-#imageZoom::after{
+
+#imageZoom::after {
     padding: 15px;
     display: var(--display);
     content: '';
@@ -220,6 +220,62 @@ nav a {
     background-position: var(--zoom-x) var(--zoom-y);
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     border-radius: 8px;
+}
+
+/*  */
+
+.like-share {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.share-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    padding-top: 10px;
+}
+.share-menu li,a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+
+}
+
+.like i,
+.share i {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    
+}
+
+.like:hover,
+.share:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.share .share-menu{
+    display: none;
+}
+.share:hover .share-menu{
+    display: block;
+}
+
+
+/* responsive */
+
+@media screen and (min-width: 768px) {
+    
 }
