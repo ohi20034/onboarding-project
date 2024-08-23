@@ -12,10 +12,13 @@ class DatabaseConnection
 
     public function __construct()
     {
-        echo "hello construct ";
+        //echo "hello construct ";
         // Declare the global variables to access them
         global $servername, $username, $password, $database;
-
+        echo "$servername ";
+        echo "$username ";
+        echo "$password ";
+        echo "$database ";
         // Assign the global variables to the class properties
         $this->servername = $servername;
         $this->username = $username;
@@ -33,18 +36,18 @@ class DatabaseConnection
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         } else {
-            echo "Connected successfully";
+            echo "Connected successfully ";
         }
     }
 
     public function close()
     {
         if ($this->connection) {
-            echo "closed";
+            /* echo "closed"; */
             $this->connection->close();
         }
     }
 }
 
-$obj = new DatabaseConnection();
-$obj->close();
+/* $obj = new DatabaseConnection();
+$obj->close(); */
