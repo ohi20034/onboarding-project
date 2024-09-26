@@ -30,11 +30,17 @@ document.addEventListener("scroll", function () {
   }
 });
 
-window.addEventListener('resize', function() {
-  var formDiv = document.querySelector('form > div');
+window.addEventListener("resize", function () {
+  var formDiv = document.querySelector("form > div");
   if (window.innerWidth <= 768) {
-      formDiv.style.width = '100%';
+    formDiv.style.width = "100%";
   } else {
-      formDiv.style.width = '50%';
+    formDiv.style.width = "50%";
   }
 });
+
+
+
+window.onload = () => {
+  document.getElementById('registrationForm').reset();
+};

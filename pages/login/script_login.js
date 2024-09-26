@@ -38,3 +38,36 @@ window.addEventListener('resize', function() {
       formDiv.style.width = '50%';
   }
 });
+
+
+/* document.addEventListener('DOMContentLoaded', function() {
+  const loginForm = document.getElementById('loginForm');
+
+  loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const formData = new FormData();
+      formData.append('email', email);
+      formData.append('password', password);
+
+      fetch('login.php', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              window.location.href = 'index.php';
+          } else {
+              alert(data.message || 'Login failed. Please try again.');
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred. Please try again.');
+      });
+  });
+}); */
