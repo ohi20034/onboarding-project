@@ -80,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
         </section>
     </main>
-    <script src="script.js" defer></script>
 </body>
 
 </html>
