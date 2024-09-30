@@ -18,7 +18,6 @@ try {
     exit();
 }
 
-// Function to escape output or return "N/A" if null
 function escape($string) {
     return isset($string) ? htmlspecialchars($string, ENT_QUOTES, 'UTF-8') : 'N/A';
 }
@@ -51,6 +50,8 @@ if (isset($_POST['logout'])) {
     <title>User Profile</title>
 </head>
 <body>
+<?php include 'C:\xampp\htdocs\onboarding-project\header.php'; ?>
+    <hr>
     <main>
         <section id="user-profile">
             <h1>User Profile</h1>

@@ -65,29 +65,8 @@ session_destroy();
 </head>
 
 <body>
-    <header>
-        <nav class="container">
-            <div class="nav-first-part">
-                <a href="../../index.php">MyShop</a>
-            </div>
-            <div class="nav-middle-part">
-                <input type="text" id="searchInput" placeholder="Search Product">
-                <a href="#" id="searchButton">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-            </div>
-            <div class="nav-last-part">
-                <div class="nav-user-account-bar">
-                    <i class="fa-regular fa-user"></i>
-                    <a href="/onboarding-project/pages/accounts/account.php">Account</a>
-                </div>
-                <div class="nav-cart-bar">
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <a href="/pages/cart/cart.html">Cart</a>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <?php include 'C:\xampp\htdocs\onboarding-project\header.php'; ?>
+    <hr>
     <main>
         <section id="registration">
             <div class="registration-title">

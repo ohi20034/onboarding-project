@@ -44,9 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login Page</title>
 </head>
 <body>
-    <header>
-        <!-- Your header content -->
-    </header>
+    
     <main>
         <section id="login">
             <div class="login-title">
@@ -62,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
             </div>
 
-            <!-- Error message display -->
+        
             <?php if (!empty($message)): ?>
                 <div class="error-message">
                     <p><?php echo htmlspecialchars($message); ?></p>
