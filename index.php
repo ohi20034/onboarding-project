@@ -17,7 +17,24 @@ try {
     echo "An error occurred: " . $e->getMessage();
     exit();
 }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require_once './models/cart_model.php'; // Include the CartModel
 
+    
+    $cartModel = new CartModal();
+    $user_email = $_SESSION['user_email']; // Get the logged-in user's email
+    $product_id = $_POST['product_id'];
+    $quantity = $_POST['quantity'];
+    $unit_price = $_POST['unit_price'];
+
+    try {
+        // Add to cart
+        $cartModel->addToCart($user_email, $product_id, $quantity, $unit_price);
+        echo "<script>alert('Product added to cart!');</script>";
+    } catch (Exception $e) {
+        echo "<script>alert('Error adding to cart: " . $e->getMessage() . "');</script>";
+    }
+}
 ?>
 
 
@@ -53,7 +70,7 @@ try {
                 </div>
                 <div class="nav-cart-bar">
                     <i class="fa-solid fa-cart-plus"></i>
-                    <a href="/pages/cart/cart.html">Cart</a>
+                    <a href="/onboarding-project/pages/cart/cart.php">Cart</a>
                 </div>
             </div>
         </nav>
@@ -79,10 +96,15 @@ try {
                     </a>
                     <h2 class="product-name"><?= htmlspecialchars($product['name']) ?></h2>
                     <p class="product-price"> <span class="price-text">Price: </span><?= htmlspecialchars($product['price']) ?></p>
-                    <div class="buttons">
-                        <button class="buy-now">Buy Now</button>
-                        <button class="add-to-cart">Add Cart</button>
-                    </div>
+                    <form action="" method="post">
+                        <input type="hidden" name="product_id" value="<?= htmlspecialchars($product['id']) ?>">
+                        <input type="hidden" name="quantity" value="1">
+                        <input type="hidden" name="unit_price" value="<?= htmlspecialchars($product['price']) ?>">
+                        <div class="buttons">
+                            <button type="submit" class="buy-now">Buy Now</button>
+                            <button type="submit" class="add-to-cart">Add Cart</button>
+                        </div>
+                    </form>
                 </div>
                 <?php endforeach; ?>
             <?php else: ?>
