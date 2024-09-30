@@ -10,8 +10,6 @@ if (!isset($_GET['product_id'])) {
 
 $product_id = $_GET['product_id'];
 
-//var_dump($product_id);
-
 try {
 
     
@@ -37,6 +35,9 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_product_details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Product Details</title>
 </head>
 
@@ -59,7 +60,7 @@ try {
                 </div>
                 <div class="nav-cart-bar">
                     <i class="fa-solid fa-cart-plus"></i>
-                    <a href="/pages/cart/cart.php">Cart</a>
+                    <a href="/onboarding-project/pages/cart/cart.php">Cart</a>
                 </div>
             </div>
         </nav>

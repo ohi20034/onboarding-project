@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remove_product'])) {
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
-                        <?php else: ?>r
+                        <?php else: ?>
                             <tr><td colspan="7">No items in the cart.</td></tr>
                         <?php endif; ?>
                     </tbody>
