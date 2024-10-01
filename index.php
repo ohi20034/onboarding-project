@@ -8,27 +8,24 @@ if (!isset($_SESSION['login'])) {
 require_once './models/product_model.php';
 
 try {
-    // Instantiate the product model
     $productModel = new productModel();
 
-    // Fetch all products
     $products = $productModel->fetchProductDetails();
 } catch (Exception $e) {
     echo "An error occurred: " . $e->getMessage();
     exit();
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    require_once './models/cart_model.php'; // Include the CartModel
+    require_once './models/cart_model.php';
 
     
     $cartModel = new CartModal();
-    $user_email = $_SESSION['user_email']; // Get the logged-in user's email
+    $user_email = $_SESSION['user_email'];
     $product_id = $_POST['product_id'];
     $quantity = $_POST['quantity'];
     $unit_price = $_POST['unit_price'];
 
     try {
-        // Add to cart
         $cartModel->addToCart($user_email, $product_id, $quantity, $unit_price);
         echo "<script>alert('Product added to cart!');</script>";
     } catch (Exception $e) {
