@@ -10,7 +10,7 @@ if (isset($_SESSION['login']) && $_SESSION['login'] == "success") {
 }
 if (isset($_SESSION['error_message'])) {
     $message = $_SESSION['error_message'];
-    unset($_SESSION['error_message']); // Clear the message after displaying it
+    unset($_SESSION['error_message']);
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         $_SESSION['error_message'] = "Invalid email or password."; 
-        header("Location: " . $_SERVER['PHP_SELF']); // Redirect to the same page to prevent form resubmission
+        header("Location: " . $_SERVER['PHP_SELF']);
         exit();
     }
 }

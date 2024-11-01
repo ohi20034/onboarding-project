@@ -1,14 +1,10 @@
 <?php
-session_start(); // Start the session
+session_start();
 require_once '../../models/user_model.php';
 
-/* if (!isset($_SESSION['login'])){
-    header("Location: /onboarding-project/pages/login/login.php");
-    exit();
-} */
 
 if (isset($_SESSION['login']) && $_SESSION['login'] === "success") {
-    // header("Location: ../../index.php");
+  
     header("Location: /onboarding-project/pages/accounts/user_profile/user_profile.php");
     exit();
 }

@@ -31,15 +31,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         mkdir($uploadDir, 0777, true);
     }
 
-    // Handle front image
     if (!empty($_FILES['front-image']['name'])) {
         $frontImage = $_FILES['front-image']['name'];
         move_uploaded_file($_FILES['front-image']['tmp_name'], $uploadDir . $frontImage);
     } else {
         $frontImage = $_POST['existing_front_image'];
     }
-
-    // Handle other images
     $otherImages = [];
     if (!empty($_FILES['other-images']['name'][0])) {
         foreach ($_FILES['other-images']['tmp_name'] as $key => $tmp_name) {

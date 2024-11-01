@@ -16,7 +16,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])
     }
 }
 
-// Fetch product details
 try {
     $products = $productModel->fetchProductDetails();
 } catch (Exception $e) {

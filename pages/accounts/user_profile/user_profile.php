@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start the session
+session_start();
 require_once '../../../models/user_model.php';
 
 if (!isset($_SESSION['user_email'])) {
@@ -46,7 +46,7 @@ if (isset($_POST['logout'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style_user_profile.css"> <!-- Include your CSS file -->
+    <link rel="stylesheet" href="./style_user_profile.css"> 
     <title>User Profile</title>
 </head>
 <body>

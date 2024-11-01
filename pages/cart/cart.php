@@ -5,7 +5,7 @@ if (!isset($_SESSION['login'])) {
     exit();
 }
 
-require_once('../../models/cart_model.php'); // Ensure this path is correct
+require_once('../../models/cart_model.php'); 
 
 try {
     $cartModel = new CartModal();
@@ -15,13 +15,13 @@ try {
     exit();
 }
 
-// Handle removal of items from the cart
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['remove_product'])) {
     try {
         $product_id = intval($_POST['product_id']);
         echo $product_id;
         $cartModel->removeFromCart($_SESSION['user_email'], $product_id);
-        header("Location: /onboarding-project/pages/cart/cart.php"); // Redirect to the cart page after removal
+        header("Location: /onboarding-project/pages/cart/cart.php"); 
         exit();
     } catch (Exception $e) {
         echo "An error occurred while removing the item: " . $e->getMessage();

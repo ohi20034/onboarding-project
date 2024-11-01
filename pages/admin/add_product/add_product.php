@@ -5,22 +5,18 @@ require_once '../../../models/product_model.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $productModel = new productModel();
 
-    // Sanitize and retrieve input values
     $name = $_POST['name']?? '';
     $categories = $_POST['categories']?? '';
     $price = $_POST['price']?? '';
     $code = $_POST['code']?? '';
     $description = $_POST['description'] ?? '';
-    
-    // Directory for uploading images
+
+   
     $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/onboarding-project/pages/admin/add_product/photo/';
 
-    // Check if the directory exists, if not, create it
     if (!file_exists($uploadDir)) {
-        mkdir($uploadDir, 0777, true); // Create directory with full permissions
+        mkdir($uploadDir, 0777, true); 
     }
-
-    // Handle front image upload
     $frontImage = $_FILES['front-image']['name'];
     $frontImagePath = $uploadDir . $frontImage;
     if (move_uploaded_file($_FILES['front-image']['tmp_name'], $frontImagePath)) {
@@ -29,24 +25,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "Failed to upload front image.";
     }
 
-    // Handle other images upload (if multiple)
     $otherImages = [];
     foreach ($_FILES['other-images']['name'] as $index => $otherImage) {
         $otherImagePath = $uploadDir . $otherImage;
         if (move_uploaded_file($_FILES['other-images']['tmp_name'][$index], $otherImagePath)) {
-            $otherImages[] = $otherImage; // Store filenames
+            $otherImages[] = $otherImage; 
         } else {
             echo "Failed to upload other image: " . $otherImage;
         }
     }
 
-    $otherImagesString = implode(',', $otherImages); // Convert array to string for storing in the database
+    $otherImagesString = implode(',', $otherImages); 
 
     try {
-        // Add new product with image paths
         $productModel->addNewProduct($name, $categories, $price, $code, $description, $frontImage, $otherImagesString, date('Y-m-d H:i:s'), date('Y-m-d H:i:s'));
         
-        // Redirect to the same page after successful product addition
         header("Location: " . $_SERVER['PHP_SELF']);
         exit;
     } catch (Exception $e) {

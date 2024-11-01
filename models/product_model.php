@@ -35,7 +35,6 @@ class productModel {
         return true;
     }
 
-    // Fetch all products from the database
     public function fetchProductDetails() {
         $sql = "SELECT * FROM products";
         $result = $this->connection->query($sql);
@@ -71,21 +70,37 @@ class productModel {
         return $product;
     }
     public function deleteProductById($product_id) {
-       
-        $sql = "DELETE FROM products WHERE id = ?"; 
+        $cartSql = "DELETE FROM cart WHERE product_id = ?";
+        $cartStmt = $this->connection->prepare($cartSql);
+    
+        if ($cartStmt === false) {
+            throw new Exception("Error preparing statement: " . $this->connection->error);
+        }
+    
+        $cartStmt->bind_param("i", $product_id);
+        
+        if (!$cartStmt->execute()) {
+            throw new Exception("Error executing statement (cart deletion): " . $cartStmt->error);
+        }
+    
+        $cartStmt->close();
+    
+        $sql = "DELETE FROM products WHERE id = ?";
         $stmt = $this->connection->prepare($sql);
     
         if ($stmt === false) {
             throw new Exception("Error preparing statement: " . $this->connection->error);
         }
     
-        $stmt->bind_param("i", $product_id); 
+        $stmt->bind_param("i", $product_id);
     
         if (!$stmt->execute()) {
-            throw new Exception("Error executing statement: " . $stmt->error);
+            throw new Exception("Error executing statement (product deletion): " . $stmt->error);
         }
+    
         $stmt->close();
     }
+    
     public function updateProduct($id, $name, $category, $price, $proCode, $description, $front_image, $other_images, $updated_at) {
 
         $sql = "UPDATE products 

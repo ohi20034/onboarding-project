@@ -49,25 +49,18 @@ class UserModel{
 
         $statement = $this->connection->prepare($sql);
         $isSuccess = 0;
-    
-        // Prepare the statement
-        
+
         if ($statement = $this->connection->prepare($sql)) {
-            // Bind the parameter
             $statement->bind_param('s', $email);
-            
-            // Execute the statement
             $statement->execute();
-            
-            // Get the result
+
             $result = $statement->get_result();
             
-            // Fetch the user (since email should be unique, there should be at most 1 row)
             if ($row = $result->fetch_assoc()) {
-                // Verify the password
+
                 $hashedPassword = $row["password"];
                 if (password_verify($password, $hashedPassword)) {
-                    return true; // Success
+                    return true;
                 } else {
                     return "Invalid password";
                 }
@@ -96,11 +89,11 @@ class UserModel{
             throw new Exception("Error executing statement: " . $error);
         }
         $result = $stmt->get_result();
-        $userData = $result->fetch_assoc(); // Fetch user data
+        $userData = $result->fetch_assoc();
 
         $stmt->close();
 
-        return $userData; // Return user data or null if not found
+        return $userData;
     }
 
 }
